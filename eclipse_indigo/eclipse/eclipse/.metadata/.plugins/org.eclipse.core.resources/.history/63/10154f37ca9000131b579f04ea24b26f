@@ -1,0 +1,60 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Change Password</title>
+<link href="../html/css.css" rel="stylesheet" type="text/css" />
+<link href="../css/registration.css" rel="stylesheet" type="text/css" />
+<%String password=(String)session.getAttribute("password");%>
+<script type="text/javascript">
+
+function checkoldpassword()
+{
+	var pass='<%=password%>';
+	var currentpassword=document.getElementById("cpassword").value;
+	if(pass.equals(currentpassword)){
+		
+		alert("Current Password is incorrect");
+	}
+	}
+
+
+</script>
+</head>
+<body>
+	<%@ include file="../JSP Pages/Header.jsp"%>
+	<%@ include file="../html/content.html"%>
+	<%@ include file="../html/SideMenu.html"%>
+	<div style="float:right;width:70%;" >
+	<fieldset id="Password Change">
+		<legend>
+			<span>Password Change</span>
+		</legend>
+		<ol>
+			<li><label class="Registrationlabel"
+				class="Registrationlabelrequired">Old Password<span>*</span>
+			</label> <input class="Registrationinput" name="CPassword" type="password"
+				id="cpassword" onblur="checkoldpassword();"/> 
+			</q></li>
+			<li><label class="Registrationlabel"
+				class="Registrationlabelrequired">New Password<span>*</span>
+			</label> <input class="Registrationinput" type="password" id="npassword"
+				name="NPassword" /></li>
+			<li><label class="Registrationlabel"
+				class="Registrationlabelrequired">Confirm New Password<span>*</span>
+			</label> <input class="Registrationinput" type="password" id="cnpassword"
+				name="CNPassword" /></li>
+
+
+		</ol>
+	</fieldset>
+</div>
+
+	<%@ include file="../html/closeContent.html"%>
+
+
+	<%@ include file="../html/Footer.html"%>
+</body>
+</html>

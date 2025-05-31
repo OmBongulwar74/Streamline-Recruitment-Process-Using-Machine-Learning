@@ -1,0 +1,99 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Registration Page</title>
+<link href="../html/css.css" rel="stylesheet" type="text/css" />
+<link href="../css/registration.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<%@ include file="../JSP Pages/Header.jsp" %>
+<%@ include file="../html/content.html" %>
+<table width="100%" height=100% border="1">
+	<p><strong>Note: Items marked * are required fields</p>
+	<input type="radio" class="Registrationinput" name="user" value="1" checked="checked">Patient Registration</input>
+	<input type="radio" class="Registrationinput" name="user" value="0">Doctor Registration</input>
+	
+				<fieldset id="personal">
+					<legend><span>Personal Details</span></legend>
+					<ol>
+						<li><label class="Registrationlabel"  class="Registrationlabelrequired">Forename<span>*</span></label>
+							<input class="Registrationinput" name="forename" type="text" id="forename" />	
+						</li>
+						<li>
+							<label class="Registrationlabel" for="surname" title="Enter your surname" class="Registrationlabelrequired">Surname<span>*</span></label>	
+							<input class="Registrationinput" type="text" id="surname" name="surname" />
+						</li>
+						<li>
+							<label class="Registrationlabel" for="email" title="Enter your email address" class="Registrationlabelrequired">Email Address<span>*</span></label>
+							<input class="Registrationinput" type="text" id="email" name="email" />
+						</li>
+						<li>
+							<label class="Registrationlabel" for="occupation" title="Choose your occupation" class="Registrationlabelrequired">Occupation<span>*</span></label>
+							<input class="Registrationinputradio" class="radio" type="radio" id="occupation" name="occupation" value="Designer" /> Designer
+							<input class="Registrationinputradio" type="radio" id="occupation" name="occupation" value="Developer" /> Developer
+							<input class="Registrationinputradio" type="radio" id="occupation" name="occupation" value="Manager" /> Manager
+						</li>
+					</ol>
+				</fieldset>
+				<fieldset id="address">
+					<legend><span>Address Details</span></legend>
+					<ol>
+						<li>
+							<label class="Registrationlabel" for="address1" title="Address Line 1" class="Registrationlabelrequired">House Number &amp; Street<span>*</span></label>
+							<input class="Registrationinput" type="text" id="address1" name="address1" />
+						</li>
+						<li>
+							<label class="Registrationlabel" for="address2" title="Address Line 2">District</label>
+							<input class="Registrationinput" type="text" id="address2" name="address2" />
+							
+						</li>
+						<li>
+							<label class="Registrationlabel" for="address3" title="Address Line 3" class="Registrationlabelrequired">Town/City<span>*</span></label>
+							<input class="Registrationinput" type="text" id="address3" name="address3" />
+						</li>
+						<li>
+							<label class="Registrationlabel" for="address4" title="Address Line 4" class="Registrationlabelrequired">County<span>*</span></label>
+							<input class="Registrationinput" type="text" id="address4" name="address4" />
+						</li>
+						<li>
+							<label class="Registrationlabel" for="postcode" title="Postcode" class="Registrationlabelrequired">Post Code<span>*</span></label>
+							<input class="Registrationinput" type="text" id="postcode" name="postcode" />
+						</li>
+						<li>
+							<label class="Registrationlabel" for="phone" title="Enter your phone number">Telephone</label>
+							<input class="Registrationinput" type="text" id="phone" name="phone" />
+						</li>
+					</ol>
+				</fieldset>
+				<fieldset id="userdetails">
+					<legend><span>Account Details</span></legend>
+					<ol>
+						<li>
+							<label class="Registrationlabel" for="username" title="Choose a username" class="Registrationlabelrequired">Username<span>*</span></label>
+							<input class="Registrationinput" type="text" id="username" name="username" />
+						</li>
+						<li>
+							<label class="Registrationlabel" for="password" title="Choose a password" class="Registrationlabelrequired">Password<span>*</span></label>
+							<input class="Registrationinput" type="password" id="password" name="password" />
+						</li>
+						<li>
+							<label class="Registrationlabel" for="verpassword" title="Verify your password" class="Registrationlabelrequired">Password confirmation<span>*</span></label>
+							<input class="Registrationinput" type="password" id="verpassword" name="verpassword" />
+						</li>
+					</ol>
+				</fieldset>
+				<fieldset id="submitform">
+					<input class="Registrationinput" type="submit" id="formsubmit" value="Create Account" /></label>
+				</fieldset>
+			</form>
+			<p>&nbsp;</p>
+		</div>
+</table>
+<%@ include file="../html/closeContent.html" %>
+<%@ include file="../html/Footer.html" %>
+
+</body>
+</html>

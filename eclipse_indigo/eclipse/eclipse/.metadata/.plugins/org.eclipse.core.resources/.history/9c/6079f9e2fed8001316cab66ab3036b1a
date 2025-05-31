@@ -1,0 +1,46 @@
+import java.awt.BorderLayout;
+import java.awt.Color;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTree;
+
+class ReadInputUI
+		extends 	JFrame
+ {
+	// Instance attributes used in this example
+	private	JPanel		topPanel;
+	private	JTree		tree;
+	private	JScrollPane scrollPane;
+
+	// Constructor of main frame
+	public ReadInputUI()
+	{
+		// Set the frame characteristics
+		setTitle( "Simple Tree Application" );
+		setSize( 300, 100 );
+		setBackground( Color.gray );
+
+		// Create a panel to hold all other components
+		topPanel = new JPanel();
+		topPanel.setLayout( new BorderLayout() );
+		getContentPane().add( topPanel );
+
+		// Create a new tree control
+		tree = new JTree();
+
+		// Add the listbox to a scrolling pane
+		scrollPane = new JScrollPane();
+		scrollPane.getViewport().add( tree );
+		topPanel.add( scrollPane, BorderLayout.CENTER );
+	}
+
+	// Main entry point for this example
+	public static void main( String args[] )
+	{
+		// Create an instance of the test application
+		ReadInputUI mainFrame	= new ReadInputUI();
+		mainFrame.setVisible( true );
+	}
+}

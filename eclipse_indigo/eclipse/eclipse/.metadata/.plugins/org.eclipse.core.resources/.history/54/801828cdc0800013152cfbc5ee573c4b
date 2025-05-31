@@ -1,0 +1,192 @@
+function nameValidation()
+{	
+	
+
+	var firstname=document.getElementById("textname").value;
+                firstname=firstname.trim();
+
+	var invalidChar1="!@#$%^&*()_+=-:{} ></.,\"\'1234567890";
+	
+	if(firstname.length==0)
+	{
+
+		document.getElementById("invalidChar1").innerHTML="First Name cannot be empty";
+		document.getElementById("invalidChar1").style.visibility="visible";
+		return false;
+ 	}
+	for(var i=0;i<firstname.length;i++)
+	{
+		for(var j=0;j<invalidChar1.length;j++)
+			{
+			if(firstname.charAt(i)==invalidChar1.charAt(j))
+                                                {
+			       document.getElementById("invalidChar1").innerHTML="Only alphabetas are allowed";
+			       document.getElementById("invalidChar1").style.visibility="visible";
+			
+			       return false;
+			   }
+			
+			}
+	}
+document.getElementById("textname").value=firstname;
+
+document.getElementById("invalidChar1").style.visibility="hidden";
+}
+
+
+function MiddlenameValidation()
+{	
+	
+
+	var mname=document.getElementById("middlename").value;
+                mname=mname.trim();
+
+	
+	
+	if(mname.length==0)
+	{
+
+		document.getElementById("invalidChar2").innerHTML="Father Name cannot be empty";
+		document.getElementById("invalidChar2").style.visibility="visible";
+		return false;
+	}
+	for(var x=0;x<mname.length;x++)
+	{
+		for(var y=0;y<invalidChar2.length;y++)
+			{
+			if(mname.charAt(x)==invalidChar2.charAt(y))
+                                                {
+			      document.getElementById("invalidChar2").innerHTML="Only alphabetas are allowed";
+			      document.getElementById("invalidChar2").style.visibility="visible";
+			
+			      return false;
+			   }
+			
+			}
+	}
+}
+function AddressValidation()
+{	
+	
+
+	var addname=document.getElementById("Address").value;
+                addname=addname.trim();
+
+	var invalidChar3="!@#$%^*_+{} ><\\";
+	
+	if(addname.length==0)
+	{
+
+		document.getElementById("invalidChar3").innerHTML=" Address cannot be empty";
+		document.getElementById("invalidChar3").style.visibility="visible";
+		return false;
+	}
+	for(var x=0;x<addname.length;x++)
+	{
+		for(var y=0;y<invalidChar3.length;y++)
+			{
+			if(addname.charAt(x)==invalidChar3.charAt(y))
+                                                {
+			      document.getElementById("invalidChar3").innerHTML="Symbol are not allowed";
+			      document.getElementById("invalidChar3").style.visibility="visible";
+			
+			      return false;
+			   }
+			
+			}
+	}
+}
+function MobileValidation()
+{	
+	
+
+	var Mobno=document.getElementById("Mobno").value;
+                Mobno=Mobno.trim();
+
+	var invalidChar4="!@#$%^&*()_+=-:{} ></.,\\ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	
+	if(Mobno.length==0)
+	{
+
+		document.getElementById("invalidChar4").innerHTML="Mobile No. cannot be empty";
+		document.getElementById("invalidChar4").style.visibility="visible";
+		return false;
+	}
+	for(var i=0;i<Mobno.length;i++)
+	{
+		for(var j=0;j<invalidChar4.length;j++)
+			{
+			if(Mobno.charAt(i)==invalidChar4.charAt(j))
+                                                {
+			       document.getElementById("invalidChar4").innerHTML="Only Numbers are allowed";
+			       document.getElementById("invalidChar4").style.visibility="visible";
+			
+			       return false;
+			   }
+			
+			}
+	}
+               for(var k=0;k<=Mobno.length;k++)
+			{
+			if(Mobno.length>10)
+                                                {
+			       document.getElementById("invalidChar4").innerHTML="Only 10 digits are allowed";
+			       document.getElementById("invalidChar4").style.visibility="visible";
+			
+			       return false;
+			   }
+			
+			}
+}
+function PincodeValidation()
+{	
+	
+
+	var pincd=document.getElementById("pincode").value;
+                pincd=pincd.trim();
+
+	var invalidChar5="!@#$%^&*()_+=-:{} ></.,\\ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	
+	if(pincd.length==0)
+	{
+
+		document.getElementById("invalidChar5").innerHTML="pincode cannot be empty";
+		document.getElementById("invalidChar5").style.visibility="visible";
+		return false;
+	}
+	for(var i=0;i<pincd.length;i++)
+	{
+		for(var j=0;j<invalidChar5.length;j++)
+			{
+			if(pincd.charAt(i)==invalidChar5.charAt(j))
+                                                {
+			       document.getElementById("invalidChar5").innerHTML="Only Numbers are allowed";
+			       document.getElementById("invalidChar5").style.visibility="visible";
+			
+			       return false;
+			   }
+			
+			}
+	}
+               for(var k=0;k<=pincd.length;k++)
+			{
+			if(pincd.length>6)
+                                                {
+			       document.getElementById("invalidChar5").innerHTML="Only 6 digits are allowed";
+			       document.getElementById("invalidChar5").style.visibility="visible";
+			
+			       return false;
+			   }
+			
+			}
+}
+
+function cityValidation()
+{
+var city=document.getElementById("Citytext").value;
+
+	if(city=="-1")
+	{
+		alert("Please select a city");
+}
+	}

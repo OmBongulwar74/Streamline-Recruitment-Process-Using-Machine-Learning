@@ -1,0 +1,27 @@
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+
+public class ReadInputUI {
+
+Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+	ReadInputUI()
+	{
+		JFrame inputFrame=new JFrame("Bubble Sort");
+		inputFrame.setVisible(true);
+		inputFrame.setSize((int)screenSize.getWidth(),(int)screenSize.getHeight());
+		inputFrame.setLayout(null);
+		JLabel digitLabel=new JLabel("Number of Digit in Bubble Sort");
+		JButton add=new JButton("ADD");
+		JTextField number=new JTextField();
+	}
+	public void 
+	
+	
+	
+}

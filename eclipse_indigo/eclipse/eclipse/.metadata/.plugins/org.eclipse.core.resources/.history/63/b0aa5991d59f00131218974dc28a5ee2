@@ -1,0 +1,18 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<%Boolean isSuccess=(Boolean)session.getAttribute("isSuccess"); 
+String userType= (String)session.getAttribute("userType");
+
+%>
+
+<link rel="stylesheet" type="text/css" media="all" href="../html/login/style.css">
+
+      <% if(isSuccess== null) {%>
+      <script type="text/javascript" src="../html/login/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../html/login/js/jquery.leanModal.min.js"></script>
+     <%}else if(isSuccess!= null){
+     if(isSuccess==false){%>
+      <script type="text/javascript" src="../html/login/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../html/login/js/jquery.leanModal.min.js"></script>
+
+      <%}}%>
+<style>

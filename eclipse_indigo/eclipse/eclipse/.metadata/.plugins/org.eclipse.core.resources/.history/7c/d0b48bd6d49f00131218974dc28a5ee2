@@ -1,0 +1,157 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<%Boolean isSuccess=(Boolean)session.getAttribute("isSuccess"); 
+String userType= (String)session.getAttribute("userType");
+
+%>
+
+<link rel="stylesheet" type="text/css" media="all" href="../html/login/style.css">
+
+      <% if(isSuccess== null) {%>
+      <script type="text/javascript" src="../html/login/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../html/login/js/jquery.leanModal.min.js"></script>
+     <%}else if(isSuccess!= null){
+     if(isSuccess==false){%>
+      <script type="text/javascript" src="../html/login/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../html/login/js/jquery.leanModal.min.js"></script>
+
+      <%}}%>
+<style>
+#sddm
+{	margin: 0;
+	padding: 0;
+	z-index: 30}
+
+#sddm li
+{	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	font: bold 11px arial}
+
+#sddm li a
+{	display: block;
+	margin: 0 1px 0 0;
+	padding: 4px 10px;
+	
+	
+	color: #FFF;
+	text-align: center;
+	text-decoration: none}
+
+#sddm li a:hover
+{
+background-color: #82CAFF;
+	}
+
+#sddm div
+{	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #EAEBD8;
+	border: 1px solid #5970B2}
+
+	#sddm div a
+	{	position: relative;
+		display: block;
+		margin: 0;
+		padding: 5px 10px;
+		width: auto;
+		white-space: nowrap;
+		text-align: left;
+		text-decoration: none;
+		background: #EAEBD8;
+		color: #2875DE;
+		font: 11px arial}
+
+	#sddm div a:hover
+	{	background: #49A3FF;
+		color: #FFF}
+
+</style>
+
+
+  <script>
+
+  var timeout	= 500;
+  var closetimer	= 0;
+  var ddmenuitem	= 0;
+
+  // open hidden layer
+  function mopen(id)
+  {	
+  	// cancel close timer
+  	mcancelclosetime();
+
+  	// close old layer
+  	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+  	// get new layer and show it
+  	ddmenuitem = document.getElementById(id);
+  	ddmenuitem.style.visibility = 'visible';
+
+  }
+  // close showed layer
+  function mclose()
+  {
+  	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+  }
+
+  // go close timer
+  function mclosetime()
+  {
+  	closetimer = window.setTimeout(mclose, timeout);
+  }
+
+  // cancel close timer
+  function mcancelclosetime()
+  {
+  	if(closetimer)
+  	{
+  		window.clearTimeout(closetimer);
+  		closetimer = null;
+  	}
+  }
+
+  // close layer when click-out
+  document.onclick = mclose; 
+  
+  </script>
+   
+      
+    
+ 
+  <div id="loginmodal" style="display:none;">
+    <h1>User Login</h1>
+    <form action="<%=request.getContextPath()%>/Controller" name="loginform" method="post" >
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" class="txtfield" tabindex="1">
+      
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" class="txtfield" tabindex="2">
+      
+      <% if(isSuccess!= null) 
+      if(isSuccess==false)
+      {%>
+      <div><font size="2" color="red"> Invalid ID or password.<br>
+Please try again using your full Yahoo ID. </font>  </div>
+     <% 
+      }
+      
+    	  
+    	  %>
+      <div class="left"><input type="submit" name="button" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3" onclick="document.form.submit();">
+      &nbsp;&nbsp;&nbsp; &nbsp;<a href="../JSP Pages/PatientRegistration.jsp"><input type="button" name="button" id="signbtn" class="flatbtn-blu hidemodal" value="Sign In" tabindex="4"></a></div>
+      
+      <div align ="center"><a href="../JSP Pages/ForgetPassword.jsp">Forget Password</a></div>
+    </form>
+  </div>
+<script type="text/javascript">
+$(function(){
+  $('#loginform').submit(function(e){
+    return false;
+  });
+  
+  $('#modaltrigger').leanModal({ top: 110, overlay: 0.3, closeButton: ".hidemodal" });
+});
+</script>

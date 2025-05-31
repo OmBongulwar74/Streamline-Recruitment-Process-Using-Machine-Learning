@@ -1,0 +1,11 @@
+package com;
+
+public abstract class TestAbstratc {
+	
+	
+	public void set()
+	{
+		System.out.println("ABC");
+	}
+
+}

@@ -1,0 +1,28 @@
+package controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import bean.DoctorBean;
+import bean.PatientBean;
+
+public class DoctorConverter {
+
+
+	public DoctorBean getDoctorBean(HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		
+		DoctorBean bean=new DoctorBean();
+		bean.setFirstName(request.getParameter("FirstName"));
+		bean.setLastName(request.getParameter("LastName"));
+		bean.setDateOfBirth(request.getParameter("Date"));
+		bean.setSpecialty(request.getParameter("Speciality"));
+		bean.setLicenseNumber(request.getParameter("LicenseNumber"));
+		bean.setAddress(request.getParameter("Address1")+" "+request.getParameter("Address2")+" "+request.getParameter("Address3"));
+		bean.setCountry(request.getParameter("Country"));
+		bean.setPostCode(Integer.parseInt(request.getParameter("PostCode")));
+		bean.setTelephone(request.getParameter("Phone"));
+		bean.setEmailId(request.getParameter("EmailID"));
+		return bean;
+	}
+
+}

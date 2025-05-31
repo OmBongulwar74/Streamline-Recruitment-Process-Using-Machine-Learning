@@ -1,0 +1,19 @@
+
+input.time, input.date { font-size: 13px; }
+input.time { width: 80px; }
+input.date { width: 90px; }
+
+
+
+
+div.ui-datepicker { font-size: 11px; }
+
+/**
+ * Blackboard theme
+ *
+ * Adapted from Domenico Carbotta's TextMate theme of the same name
+ *
+ * @author Domenico Carbotta
+ * @author Craig Campbell
+ * @version 1.0.2
+ */

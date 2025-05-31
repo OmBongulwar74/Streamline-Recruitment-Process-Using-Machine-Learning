@@ -1,0 +1,67 @@
+drop table  Persons1;
+CREATE TABLE Persons1
+(
+emailid varchar(25) NOT NULL,
+password varchar(15),
+usertype varchar(15),
+PRIMARY KEY (emailid)
+)
+desc Login;
+ dugar_ashish@yahoo.com    Patient
+
+select * from Login;
+select * from PatientRegistration;
+select * from DoctorRegistration;
+delete from DoctorRegistration;
+delete from PatientRegistration;
+delete from Login;
+desc PatientRegistration;
+
+  dugar_ashish@yahoo.com   ha73lmTD Patient
+
+
+CREATE TABLE Login
+(
+emailid varchar(25),
+password varchar(15),
+usertype varchar(15),
+PRIMARY KEY (emailid)
+)
+
+drop table Registration;
+drop table Login;
+select * from login;
+CREATE TABLE Registration
+(
+
+firstname varchar(15),
+lastname varchar(15),
+dob varchar(10),
+Address varchar(50),
+Country varchar(15),
+emailid varchar(15) NOT NULL,
+FOREIGN KEY (emailid) REFERENCES Login(emailid)
+)
+
+CREATE TABLE Chat
+(
+
+chat varchar(40),
+toemailid varchar(35),
+fromemailid varchar(35),
+FOREIGN KEY (toemailid) REFERENCES Login(emailid),
+FOREIGN KEY (fromemailid) REFERENCES Login(emailid)
+)
+
+create table postquery(emailid varchar(30) NOT NULL,query varchar(1000),FOREIGN KEY (emailid) REFERENCES Login(emailid));
+CREATE TABLE AppointmentDetail
+(
+
+emailid varchar(15) NOT NULL,
+doctorname varchar(30),
+startdate varchar(15),
+enddate varchar(15),
+startTime varchar(15),
+endTime varchar(15),
+FOREIGN KEY (emailid) REFERENCES Login(emailid)
+)

@@ -1,0 +1,35 @@
+
+<%@ page  language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Medical Center</title>
+
+<link href="../html/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<%@ include file="../html/Header.html" %>
+<%@ include file="../html/content.html" %>
+	<table>
+	<tr>
+	<td>
+<%@ include file="../slidder/Slidder.html" %>
+</td>
+<td align="left" valign="top" style="padding-top:4px; padding-bottom:4px;>
+ <p class="body">
+ <input id="name" type="text" style="width:250px; height:15px;" onclick="name1();"/></td>
+</td>
+</tr>
+</table> 		 															
+<%@ include file="../html/closeContent.html" %>
+
+
+<%@ include file="../html/Footer.html" %>
+
+</body>
+</html>

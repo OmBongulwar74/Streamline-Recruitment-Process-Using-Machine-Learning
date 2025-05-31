@@ -1,0 +1,30 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+
+public class ServerTest {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		ServerSocket s=new ServerSocket(8149);
+		Socket conn=s.accept();
+		
+		BufferedReader in=new BufferedReader(new InputStreamReader(conn.getInputStream()));
+		PrintWriter out=new PrintWriter(conn.getOutputStream(),true);
+		while(true)
+		{
+			System.out.println(in.readLine());
+		}
+		
+
+	}
+
+}
