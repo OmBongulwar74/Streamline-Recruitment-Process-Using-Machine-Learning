@@ -1,6 +1,0 @@
-select * from Login;
-select * from DoctorRegistration;
-delete from  patientregistration where firstname="Ashish";
-
-
-select a.firstname from DoctorRegistration as a , Login as b where a.emailid=b.emailid and b.usertype='Doctor'

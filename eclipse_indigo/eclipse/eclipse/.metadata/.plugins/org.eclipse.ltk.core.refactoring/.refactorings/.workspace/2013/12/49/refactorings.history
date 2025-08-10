@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;online Doctor&apos; to &apos;online Doctor(MVC)&apos;" description="Rename resource &apos;online Doctor&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/online Doctor" name="online Doctor(MVC)" stamp="1386388520074" updateReferences="true"/>
-</session>
